@@ -30,7 +30,7 @@ export interface PurchaseSummary {
 }
 
 export interface ExpenseSummary {
-  expenseSummarId: string;
+  expenseSummaryId: string;
   totalExpenses: number;
   date: string;
 }
@@ -56,6 +56,7 @@ export interface User {
   email: string;
 }
 
+// make api calls from frontend to backend
 export const api = createApi({
   baseQuery: fetchBaseQuery({ baseUrl: process.env.NEXT_PUBLIC_API_BASE_URL }),
   reducerPath: "api",
