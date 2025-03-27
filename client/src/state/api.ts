@@ -66,6 +66,7 @@ export const api = createApi({
       query: () => "/dashboard",
       providesTags: ["DashboardMetrics"],
     }),
+
     getProducts: build.query<Product[], string | void>({
       query: (search) => ({
         url: "/products",
@@ -73,6 +74,7 @@ export const api = createApi({
       }),
       providesTags: ["Products"],
     }),
+    
     createProduct: build.mutation<Product, NewProduct>({
       query: (newProduct) => ({
         url: "/products",
